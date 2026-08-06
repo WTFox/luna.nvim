@@ -1,0 +1,58 @@
+[metadata]
+name = "luna"
+author = "wtfox"
+origin_url = "https://github.com/wtfox/luna.nvim"
+
+[colors]
+foreground = "#e4e4e8"
+background = "#060606"
+cursor_fg = "#060606"
+cursor_bg = "#e4e4e8"
+cursor_border = "#e4e4e8"
+selection_fg = "#e4e4e8"
+selection_bg = "#404040"
+compose_cursor = "#e4e4e8"
+visual_bell = "#40000a"
+
+ansi = [
+  "#000000",
+  "#e08585",
+  "#6fbe80",
+  "#c2916a",
+  "#75a1c7",
+  "#c4a8d6",
+  "#75a1c7",
+  "#c7c7c7",
+]
+
+brights = [
+  "#888888",
+  "#e08585",
+  "#6fbe80",
+  "#d9a35a",
+  "#8c9cb8",
+  "#c4a8d6",
+  "#75a1c7",
+  "#ffffff",
+]
+
+[colors.indexed]
+16 = "#a8a8a8"
+17 = "#c2916a"
+18 = "#1c1c1c"
+19 = "#404040"
+20 = "#888888"
+21 = "#c7c7c7"
+
+[colors.tab_bar]
+background = "#060606"
+active_tab.bg_color = "#1c1c1c"
+active_tab.fg_color = "#e4e4e8"
+inactive_tab.bg_color = "#060606"
+inactive_tab.fg_color = "#888888"
+inactive_tab_hover.bg_color = "#1c1c1c"
+inactive_tab_hover.fg_color = "#a8a8a8"
+new_tab.bg_color = "#060606"
+new_tab.fg_color = "#888888"
+new_tab_hover.bg_color = "#1c1c1c"
+new_tab_hover.fg_color = "#a8a8a8"

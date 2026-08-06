@@ -1,0 +1,72 @@
+local M = {}
+
+function M.get(c, opts)
+  return {
+    BlinkCmpMenu = { fg = c.fg, bg = c.bg },
+    BlinkCmpMenuBorder = { fg = c.border, bg = c.bg },
+    BlinkCmpMenuSelection = { bg = c.selection },
+    BlinkCmpScrollBarGutter = { bg = c.bg },
+    BlinkCmpScrollBarThumb = { bg = c.border },
+
+    BlinkCmpLabel = { fg = c.fg },
+    BlinkCmpLabelMatch = { fg = c.keyword },
+    BlinkCmpLabelDetail = { fg = c.grey_light },
+    BlinkCmpLabelDescription = { fg = c.grey_light },
+    BlinkCmpLabelDeprecated = { fg = c.comment, strikethrough = true },
+
+    BlinkCmpKind = { fg = c.func },
+    BlinkCmpKindArray = "LspKindArray",
+    BlinkCmpKindBoolean = "LspKindBoolean",
+    BlinkCmpKindClass = "LspKindClass",
+    BlinkCmpKindCodeium = { bg = "NONE", fg = c.silver },
+    BlinkCmpKindColor = "LspKindColor",
+    BlinkCmpKindConstant = "LspKindConstant",
+    BlinkCmpKindConstructor = "LspKindConstructor",
+    BlinkCmpKindCopilot = { bg = "NONE", fg = c.silver },
+    BlinkCmpKindDefault = { bg = "NONE", fg = c.silver },
+    BlinkCmpKindEnum = "LspKindEnum",
+    BlinkCmpKindEnumMember = "LspKindEnumMember",
+    BlinkCmpKindEvent = "LspKindEvent",
+    BlinkCmpKindField = "LspKindField",
+    BlinkCmpKindFile = "LspKindFile",
+    BlinkCmpKindFolder = "LspKindFolder",
+    BlinkCmpKindFunction = "LspKindFunction",
+    BlinkCmpKindInterface = "LspKindInterface",
+    BlinkCmpKindKey = "LspKindKey",
+    BlinkCmpKindKeyword = "LspKindKeyword",
+    BlinkCmpKindMethod = "LspKindMethod",
+    BlinkCmpKindModule = "LspKindModule",
+    BlinkCmpKindNamespace = "LspKindNamespace",
+    BlinkCmpKindNull = "LspKindNull",
+    BlinkCmpKindNumber = "LspKindNumber",
+    BlinkCmpKindObject = "LspKindObject",
+    BlinkCmpKindOperator = "LspKindOperator",
+    BlinkCmpKindPackage = "LspKindPackage",
+    BlinkCmpKindProperty = "LspKindProperty",
+    BlinkCmpKindReference = "LspKindReference",
+    BlinkCmpKindSnippet = "LspKindSnippet",
+    BlinkCmpKindString = "LspKindString",
+    BlinkCmpKindStruct = "LspKindStruct",
+    BlinkCmpKindSupermaven = { bg = "NONE", fg = c.silver },
+    BlinkCmpKindTabNine = { bg = "NONE", fg = c.silver },
+    BlinkCmpKindText = "LspKindText",
+    BlinkCmpKindTypeParameter = "LspKindTypeParameter",
+    BlinkCmpKindUnit = "LspKindUnit",
+    BlinkCmpKindValue = "LspKindValue",
+    BlinkCmpKindVariable = "LspKindVariable",
+    BlinkCmpSource = { fg = c.type },
+
+    BlinkCmpGhostText = { link = "Comment" },
+
+    BlinkCmpDoc = { fg = c.fg, bg = c.bg },
+    BlinkCmpDocBorder = { fg = c.border, bg = c.bg },
+    BlinkCmpDocSeparator = { fg = c.border },
+    BlinkCmpDocCursorLine = { bg = c.selection },
+
+    BlinkCmpSignatureHelp = { fg = c.fg, bg = c.bg },
+    BlinkCmpSignatureHelpBorder = { fg = c.border, bg = c.bg },
+    BlinkCmpSignatureHelpActiveParameter = { fg = c.number },
+  }
+end
+
+return M

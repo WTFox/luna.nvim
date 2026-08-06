@@ -1,0 +1,93 @@
+local Util = require("luna.util")
+
+local M = {}
+
+M.plugins = {
+  ["avante.nvim"] = "avante",
+  ["blink.cmp"] = "blink",
+  ["CopilotChat.nvim"] = "copilotchat",
+  ["dashboard-nvim"] = "dashboard",
+  ["dressing.nvim"] = "dressing",
+  ["diffview.nvim"] = "diffview",
+  ["flash.nvim"] = "flash",
+  ["gitsigns.nvim"] = "gitsigns",
+  ["grapple.nvim"] = "grapple",
+  ["fzf-lua"] = "fzf_lua",
+  ["incline.nvim"] = "incline",
+  ["lazy.nvim"] = "lazy",
+  ["leap.nvim"] = "leap",
+  ["mini.nvim"] = "mini",
+  ["neo-tree.nvim"] = "neotree",
+  ["nvim-treesitter-context"] = "treesitter_context",
+  ["render-markdown.nvim"] = "render_markdown",
+  ["snacks.nvim"] = "snacks",
+  ["telescope.nvim"] = "telescope",
+  ["trouble.nvim"] = "trouble",
+  ["which-key.nvim"] = "which_key",
+}
+
+local me = debug.getinfo(1, "S").source:sub(2)
+me = vim.fn.fnamemodify(me, ":h")
+
+function M.get_group(name)
+  return Util.mod("luna.groups." .. name)
+end
+
+function M.get(name, colors, opts)
+  local mod = M.get_group(name)
+  return mod.get(colors, opts)
+end
+
+function M.setup(colors, opts)
+  opts = opts or {}
+  opts.plugins = opts.plugins or {}
+
+  local groups = {
+    editor = true,
+    syntax = true,
+    semantic_tokens = true,
+    treesitter = true,
+    terminal = true,
+  }
+  if opts.plugins.all then
+    for _, group in pairs(M.plugins) do
+      groups[group] = true
+    end
+  elseif opts.plugins.auto and package.loaded.lazy then
+    local plugins = require("lazy.core.config").plugins
+    for plugin, group in pairs(M.plugins) do
+      if plugins[plugin] then
+        groups[group] = true
+      end
+    end
+  end
+
+  -- manually enable/disable plugins
+  for plugin, group in pairs(M.plugins) do
+    local use = opts.plugins[group]
+    use = use == nil and opts.plugins[plugin] or use
+    if use ~= nil then
+      if type(use) == "table" then
+        use = use.enabled
+      end
+      groups[group] = use or nil
+    end
+  end
+
+  local names = vim.tbl_keys(groups)
+  table.sort(names)
+
+  local ret = {}
+
+  for _, group in ipairs(names) do
+    for k, v in pairs(M.get(group, colors, opts)) do
+      ret[k] = v
+    end
+  end
+
+  Util.resolve(ret)
+
+  return ret, groups
+end
+
+return M

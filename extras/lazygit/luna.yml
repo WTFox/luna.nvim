@@ -1,0 +1,30 @@
+git:
+  diffRenderers:
+    - type: extDiff
+      command: difft --color=always --context={{diffContext}}
+
+gui:
+  nerdFontsVersion: "3"
+  theme:
+    activeBorderColor:
+      - "#75a1c7"
+      - bold
+    inactiveBorderColor:
+      - "#404040"
+    optionsTextColor:
+      - "#75a1c7"
+    selectedLineBgColor:
+      - "#212121"
+    selectedRangeBgColor:
+      - "#212121"
+    cherryPickedCommitBgColor:
+      - "#c4a8d6"
+    cherryPickedCommitFgColor:
+      - "#75a1c7"
+    unstagedChangesColor:
+      - "#e08585"
+    defaultFgColor:
+      - "#e4e4e8"
+    searchingActiveBorderColor:
+      - "#d9a35a"
+      - bold
