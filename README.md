@@ -42,3 +42,18 @@ require("luna").setup({
 `on_colors` runs first, against the resolved palette, before any highlight
 group is built. `on_highlights` runs last, after every group (core, syntax,
 treesitter, and plugin integrations) has been generated, so it always wins.
+
+## Extras
+
+Theme files for other tools are available in [`extras/`](./extras/):
+
+- [bat](./extras/bat)
+- [fzf](./extras/fzf)
+- [Ghostty](./extras/ghostty)
+- [Herdr](./extras/herdr)
+- [Kitty](./extras/kitty)
+- [lazygit](./extras/lazygit)
+- [OpenCode](./extras/opencode)
+- [Starship](./extras/starship)
+- [WezTerm](./extras/wezterm)
+- [yazi](./extras/yazi)
