@@ -1,0 +1,22 @@
+# name = "luna"
+# author = "wtfox"
+
+palette = "luna"
+
+[palettes.luna]
+black = "#000000"
+red = "#e08585"
+green = "#6fbe80"
+yellow = "#c2916a"
+blue = "#75a1c7"
+purple = "#c4a8d6"
+cyan = "#75a1c7"
+white = "#c7c7c7"
+bright-black = "#888888"
+bright-red = "#e08585"
+bright-green = "#6fbe80"
+bright-yellow = "#d9a35a"
+bright-blue = "#8c9cb8"
+bright-purple = "#c4a8d6"
+bright-cyan = "#75a1c7"
+bright-white = "#ffffff"
