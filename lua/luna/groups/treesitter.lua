@@ -75,7 +75,8 @@ function M.get(c, opts)
     ["@number.float"] = "Float",
     ["@operator"] = "Operator",
     ["@property"] = "Property",
-    ["@property.toml"] = "Operator",
+    ["@property.toml"] = "Property",
+    ["@toml.tableKey"] = { fg = c.type },
     ["@punctuation.bracket"] = { fg = c.grey_light }, -- For brackets and parens.
     ["@punctuation.delimiter"] = { fg = c.grey_light }, -- For delimiters ie: `.`
     ["@punctuation.special"] = "SpecialChar",
