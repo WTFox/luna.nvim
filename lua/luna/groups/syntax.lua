@@ -49,13 +49,13 @@ function M.get(c, opts)
     htmlSpecialChar = { fg = c.signal },
 
     -- Markdown
-    RenderMarkdownCodeInline = { bg = c.bg, fg = c.grey },
-    RenderMarkdownH1Bg = { bg = c.bg, fg = c.silver },
-    RenderMarkdownH2Bg = { bg = c.bg, fg = c.grey_pale },
-    RenderMarkdownH3Bg = { bg = c.bg, fg = c.type },
-    RenderMarkdownH4Bg = { bg = c.bg, fg = c.grey_light },
-    RenderMarkdownH5Bg = { bg = c.bg, fg = c.grey_light },
-    RenderMarkdownH6Bg = { bg = c.bg, fg = c.silver },
+    RenderMarkdownCodeInline = { bg = opts.transparent and "NONE" or c.bg, fg = c.grey },
+    RenderMarkdownH1Bg = { bg = opts.transparent and "NONE" or c.bg, fg = c.silver },
+    RenderMarkdownH2Bg = { bg = opts.transparent and "NONE" or c.bg, fg = c.grey_pale },
+    RenderMarkdownH3Bg = { bg = opts.transparent and "NONE" or c.bg, fg = c.type },
+    RenderMarkdownH4Bg = { bg = opts.transparent and "NONE" or c.bg, fg = c.grey_light },
+    RenderMarkdownH5Bg = { bg = opts.transparent and "NONE" or c.bg, fg = c.grey_light },
+    RenderMarkdownH6Bg = { bg = opts.transparent and "NONE" or c.bg, fg = c.silver },
   }
 end
 
