@@ -10,10 +10,10 @@ function M.get(c, opts)
     TelescopePromptNormal = { bg = opts.transparent and "NONE" or c.bg },
     TelescopeResultsNormal = { bg = opts.transparent and "NONE" or c.bg },
     TelescopePreviewNormal = { bg = opts.transparent and "NONE" or c.bg },
-    TelescopePromptBorder = { fg = c.surface, bg = c.bg },
-    TelescopeResultsBorder = { fg = c.surface, bg = c.bg },
-    TelescopePreviewBorder = { fg = c.surface, bg = c.bg },
-    TelescopePromptPrefix = { fg = c.grey, bg = c.bg },
+    TelescopePromptBorder = { fg = c.surface, bg = opts.transparent and "NONE" or c.bg },
+    TelescopeResultsBorder = { fg = c.surface, bg = opts.transparent and "NONE" or c.bg },
+    TelescopePreviewBorder = { fg = c.surface, bg = opts.transparent and "NONE" or c.bg },
+    TelescopePromptPrefix = { fg = c.grey, bg = opts.transparent and "NONE" or c.bg },
     TelescopePromptTitle = { fg = c.bg, bg = c.grey },
     TelescopeResultsTitle = { bg = c.silver, fg = c.bg },
     TelescopePreviewTitle = { bg = c.grey_light, fg = c.bg },
@@ -21,7 +21,7 @@ function M.get(c, opts)
     TelescopeSelectionCaret = { fg = c.grey, bg = c.bg_alt },
     TelescopeMultiSelection = { bg = c.bg_alt },
     TelescopeMatching = { fg = c.grey },
-    TelescopePromptCounter = { fg = c.keyword, bg = c.bg },
+    TelescopePromptCounter = { fg = c.keyword, bg = opts.transparent and "NONE" or c.bg },
   }
 end
 

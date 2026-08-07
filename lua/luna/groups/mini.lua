@@ -17,9 +17,9 @@ function M.get(c, opts)
     MiniStatuslineModeOther = { fg = c.black, bg = c.grey_light },
 
     MiniStatuslineDevinfo = { fg = c.fg, bg = c.bg_alt },
-    MiniStatuslineFilename = { fg = c.fg_bright, bg = c.bg },
+    MiniStatuslineFilename = { fg = c.fg_bright, bg = opts.transparent and "NONE" or c.bg },
     MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg_alt },
-    MiniStatuslineInactive = { fg = c.keyword, bg = c.bg },
+    MiniStatuslineInactive = { fg = c.keyword, bg = opts.transparent and "NONE" or c.bg },
   }
 end
 
