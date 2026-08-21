@@ -4,6 +4,8 @@ An unofficial port of the luna palette to a VS Code color theme, covering
 editor syntax highlighting, terminal ANSI colors, and workbench UI (sidebar,
 tabs, status bar, git decorations, diagnostics, etc).
 
+Also available on the VS Code Marketplace: [Luna (luna.nvim)](https://marketplace.visualstudio.com/items?itemName=snekxs.luna-nvim-theme).
+
 ## Usage
 
 This folder is a minimal, installable VS Code theme extension.
