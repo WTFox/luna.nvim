@@ -58,6 +58,7 @@ Theme files for other tools are available in [`extras/`](./extras/):
 - [lazygit](./extras/lazygit)
 - [OpenCode](./extras/opencode)
 - [Starship](./extras/starship)
+- [VS Code](./extras/vscode)
 - [WezTerm](./extras/wezterm)
 - [yazi](./extras/yazi)
 - [Zellij](./extras/zellij)

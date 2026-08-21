@@ -1,0 +1,20 @@
+{
+  "name": "luna-theme",
+  "displayName": "Luna",
+  "description": "A minimal, near-black VS Code theme with warm and cool accents. Ported from luna.nvim.",
+  "version": "1.0.0",
+  "publisher": "your-publisher-id",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Themes"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Luna",
+        "uiTheme": "vs-dark",
+        "path": "./themes/luna-color-theme.json"
+      }
+    ]
+  }
+}
