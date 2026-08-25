@@ -18,7 +18,6 @@ marker_selected = { fg = "#060606", bg = "#c2916a" }
 # Tab
 tab_active = { fg = "#e4e4e8", bg = "#1c1c1c" }
 tab_inactive = { fg = "#888888", bg = "#060606" }
-tab_width = 1
 
 # Count
 count_copied = { fg = "#e4e4e8", bg = "#888888" }
@@ -108,11 +107,11 @@ rules = [
   { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#75a1c7" },
 
   # Special files
-  { name = "*", is = "link", fg = "#b09080" },
-  { name = "*/", is = "link", fg = "#b09080" },
-  { name = "*", is = "orphan", bg = "#e08585" },
-  { name = "*", is = "exec", fg = "#b09080" },
+  { url = "*", is = "link", fg = "#b09080" },
+  { url = "*/", is = "link", fg = "#b09080" },
+  { url = "*", is = "orphan", bg = "#e08585" },
+  { url = "*", is = "exec", fg = "#b09080" },
 
   # Fallback
-  { name = "*/", fg = "#75a1c7" },
+  { url = "*/", fg = "#75a1c7" },
 ]
