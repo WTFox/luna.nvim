@@ -61,4 +61,5 @@ Theme files for other tools are available in [`extras/`](./extras/):
 - [VS Code](./extras/vscode)
 - [WezTerm](./extras/wezterm)
 - [yazi](./extras/yazi)
+- [Zed](./extras/zed)
 - [Zellij](./extras/zellij)
